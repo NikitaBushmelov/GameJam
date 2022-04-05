@@ -1,0 +1,34 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerController2 : MonoBehaviour
+{
+    bool moveLeft;
+    bool moveRight;
+    Rigidbody2D rb2d;
+    public float speed;
+    // Start is called before the first frame update
+    void Start()
+    {
+        rb2d = gameObject.GetComponent<Rigidbody2D>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        moveLeft = Input.GetKey(KeyCode.LeftArrow);
+        moveRight = Input.GetKey(KeyCode.RightArrow);
+    }
+    private void FixedUpdate()
+    {
+        if (moveLeft)
+        {
+            rb2d.AddForce(new Vector2(-speed, 0f));
+        }
+        if (moveRight)
+        {
+            rb2d.AddForce(new Vector2(speed, 0f));
+        }
+    }
+}
