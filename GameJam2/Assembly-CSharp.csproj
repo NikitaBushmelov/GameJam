@@ -54,8 +54,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Menu.cs" />
-    <Compile Include="Assets\Scripts\Play.cs" />
+    <Compile Include="Assets\Scripts\game1.cs" />
     <Compile Include="Assets\Scripts\ExitGame.cs" />
+    <Compile Include="Assets\Scripts\game2.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

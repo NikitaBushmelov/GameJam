@@ -339,8 +339,9 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
 "Assets/Scripts/ExitGame.cs"
+"Assets/Scripts/game1.cs"
+"Assets/Scripts/game2.cs"
 "Assets/Scripts/Menu.cs"
-"Assets/Scripts/Play.cs"
 -langversion:8.0
 
 /deterministic
