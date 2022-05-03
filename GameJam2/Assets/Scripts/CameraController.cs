@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraController : MonoBehaviour
 {
     public Transform[] target;
-    float speed=3;
+    public float speed;
     int curPos = 0;
     int nextPos = 1;
 
@@ -27,13 +28,16 @@ public class CameraController : MonoBehaviour
         
 
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("Player1")) { 
-            
-        }
-        if(collision.collider.CompareTag("Player2")) {
 
+    private void OnTriggerEnter2D(Collider2D other) {
+
+        if (other.gameObject.tag=="Player1") {
+            SceneManager.LoadScene("WinP2");
         }
+        if (other.gameObject.tag == "Player2")
+        {
+            SceneManager.LoadScene("WinP1");
+        }
+
     }
 }

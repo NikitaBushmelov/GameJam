@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController2 : MonoBehaviour
 {
@@ -29,6 +30,13 @@ public class PlayerController2 : MonoBehaviour
         if (moveRight)
         {
             rb2d.AddForce(new Vector2(speed, 0f));
+        }
+    }
+    private void OnCollision2D(Collider other)
+    {
+        if (other.gameObject.tag == "WinFlag")
+        {
+            SceneManager.LoadScene("WinP2");
         }
     }
 }
